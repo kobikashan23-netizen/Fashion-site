@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            height: 90px;
+            display: grid;
+            place-items: center;
+            background-color: whitesmoke;
+
+
+        }
+
+        .subpg {
+            width: 100%;
+            padding: 50px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+
+        }
+
+        .subpg nav {
+            justify-self: end;
+        }
+
+        .navlogo {
+            color: rgb(188, 25, 25);
+        }
+
+        ul {
+            display: grid;
+            grid-auto-flow: column;
+            list-style: none;
+            gap: 20px;
+        }
+
+        ul li {
+            padding: 15px;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgb(214, 19, 19);
+            color: white;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            color: rgb(25, 23, 23);
+            text-decoration: none;
+        }
+
+        .section1 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+            padding: 50px 80px;
+            height: 400px;
+            background-color: rgb(255, 252, 252);
+        }
+        .section1 h1 {
+            font-size: 40px;
+            color: black;
+            margin-right: 390px;
+        }
+
+        .div1 {
+            min-width: 0;
+        }
+
+        .div2 {
+            min-width: 0;
+        }
+
+        .child2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            padding-top: 30px;
+        }
+
+        .child2 div {
+            text-align: center;
+        }
+
+        .child1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .child1 .describe {
+            color: #DC3545;
+        }
+
+        .child3 {
+            padding-top: 30px;
+        }
+
+        .btn2 {
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #DC3545;
+            border: none;
+            color: rgb(237, 230, 230);
+            cursor: pointer;
+        }
+
+        .btn3 {
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: 2px solid #DC3545;
+            color: #DC3545;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* sec2 section */
+        .section2 {
+            padding-top: 50px;
+            height: 500px;
+            height: 500px;
+
+        }
+
+        .section2 h1 {
+            text-align: center;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 30px 80px;
+            gap: 50px;
+            height: 500px;
+        }
+
+        .image {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            height: 400px;
+        }
+
+        .image img {
+            width: 100%;
+            object-fit: cover;
+            height: 320px;
+        }
+
+        .image p {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            /* padding-top: 30px; */
+            margin-top: 30px;
+        }
+
+        .str {
+            width: 100%;
+        }
+
+        .part1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-content: space-around;
+            height: 200px;
+
+        }
+
+        .para h2 {
+            gap: 50px;
+            /* margin-bottom: 35px; */
+            padding-top: 20px;
+        }
+
+        .para p {
+            gap: 200px;
+            margin-bottom: 30px;
+            font-size: medium;
+        }
+
+        .part {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            /* margin: 30px; */
+            font-size: large;
+            line-height: 30px;
+            gap: 100px;
+
+        }
+
+        .part .sub-part1 {
+            width: 50%;
+        }
+
+        .fa-solid {
+            color: green;
+        }
+
+        .part2 {
+            /* padding-top: -100px;
+            padding-bottom:100px ; */
+            margin-top: 50px;
+        }
+
+        .part2 .btn1 {
+            background-color: rgb(230, 63, 63);
+            color: white;
+            /* padding-top: -100px; */
+
+        }
+
+        /* sec3 section */
+        .section3 {
+            background-color: #f6f7f8;
+            padding: 35px 80px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            /* text-align: center; */
+            /* margin-right: 300px; */
+            gap: 30px;
+        }
+
+        .section3-card {
+            background-color: white;
+            text-align: center;
+            padding: 80px 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px #00000020;
+        }
+
+        .section3-card .fa-solid {
+            color: red;
+        }
+
+        .section3-card h3 {
+            font-size: 17px;
+            margin-bottom: 19px;
+
+        }
+
+        .section3-card p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #747980;
+        }
+
+        /* sec4 section */
+        .section4 {
+            padding: 35px 80px;
+            background-color: white;
+        }
+
+        .section4 h2 {
+            text-align: center;
+            font-size: 40px;
+            color: black;
+            margin-bottom: 35px;
+        }
+
+        .section4 h2 span {
+            color: #e73146;
+        }
+
+        .section4-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            border-radius: 12px;
+        }
+
+
+
+        .product-card {
+            position: relative;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            /* position: relative; */
+            width: 100%;
+            height: 75%;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* display: block; */
+        }
+
+        .discount {
+            position: absolute;
+            top: 7px;
+            left: 0px;
+            background: #e73146;
+            color: white;
+            padding: 10px 9px;
+            font-size: 10px;
+            border-radius: 3px;
+        }
+
+        .product-info {
+            padding: 12px 15px 20px;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        .product-info p {
+            font-size: 15px;
+            color: #797474;
+            margin-bottom: 17px;
+        }
+
+        .price {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: red;
+            font-size: 20px;
+        }
+
+        .price del {
+            color: #000000;
+            font-size: 14px;
+        }
+
+        .product-info button {
+            width: 100%;
+            background-color: rgb(168, 4, 4);
+            color: white;
+            height: 22px;
+        }
+
+        .product-vieww {
+            text-align: center;
+            margin-top: -10px;
+            padding: 50px 80px;
+            border: 10px;
+        }
+
+        .product-vieww button {
+            background-color: #DC3545;
+            color: #f6f7f8;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: -70px;
+        }
+
+        .section5 {
+            padding: 35px 80px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #25292d;
+            margin-top: 0;
+        }
+
+        .section5-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            /* padding: 30px 80px; */
+            width: 100%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 50px 80px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px #938f8f;
+            /* box-shadow: 0 4px 10px #00000020; */
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 70%;
+        }
+
+        .card h3 {
+            font-size: 19px;
+        }
+
+        .role {
+            color: gray;
+            font-size: 12px;
+        }
+
+        .review {
+            color: gray;
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .stars {
+            color: rgb(210, 164, 77);
+            font-size: 18px;
+        }
+
+        .section6 {
+            background-color: #df3043;
+            color: white;
+            padding: 32px 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+
+        }
+
+        .section6 h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .section6 p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-form {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .subscribe-form input {
+            width: 170px;
+            padding: 10px 15px;
+            border: none;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        .subscribe-form button {
+            background-color: #171d24;
+            color: white;
+            border: none;
+            padding: 9px 16px;
+            font-size: 12px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #202428;
+            color: white;
+            padding: 50px 80px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer-colm {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .footer-colum h4 {
+            font-size: 19px;
+            margin: 12px;
+        }
+
+        .footer-colm a,
+        .footer-colm p {
+            font-size: 17px;
+            color: #b5b8bb;
+            text-decoration: none;
+            margin: 9px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(24px, max-content));
+            gap: 10px;
+            margin-top: 7px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #424649;
+            padding-top: 15px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            font-size: 16px;
+            color: #b5b8bb;
+        }
+
+        .footer-bottom a {
+            font-size: 15px;
+            color: #b5b8bb;
+        }
+
+        .footer-bottom a {
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .section2 {
+            height: auto;
+        }
+
+        .page {
+            height: auto;
+        }
+
+        .subpg {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            padding: 16px;
+        }
+
+        .subpg nav {
+            justify-self: stretch;
+        }
+
+        ul {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-flow: row;
+            gap: 4px;
+        }
+
+        ul li {
+            padding: 8px;
+        }
+
+        .btn {
+            justify-self: start;
+            margin: 0;
+        }
+
+        .section1,
+        .about {
+            height: auto;
+            padding: 28px 16px;
+            grid-template-columns: 1fr;
+        }
+
+        .section1 {
+            gap: 24px;
+        }
+
+        .section1 .div2 img {
+            height: 200px;
+        }
+
+        .child2 {
+            gap: 8px;
+        }
+
+        .child2 span {
+            font-size: 13px;
+        }
+
+        .about {
+            gap: 24px;
+        }
+
+        .about .image {
+            max-width: 480px;
+            height: 340px;
+            justify-self: center;
+        }
+
+        .about .image img {
+            height: 260px;
+        }
+
+        .image p {
+            margin: 16px 8px;
+            font-size: 22px;
+        }
+
+        .part {
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .part .sub-part1 {
+            width: auto;
+        }
+
+        .part2 {
+            margin-top: 24px;
+        }
+
+        .section3 {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 24px 16px;
+        }
+
+        .section3-card,
+        .card {
+            padding: 24px 18px;
+        }
+
+        .section4,
+        .section5 {
+            padding: 28px 16px;
+        }
+
+        .section4 h2 {
+            font-size: 28px;
+        }
+
+        .section4-container,
+        .section5-container {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .product-card {
+            height: auto;
+        }
+
+        .product-image {
+            height: 240px;
+        }
+
+        .product-vieww {
+            padding: 36px 16px;
+        }
+
+        .section6 h2 {
+            font-size: 22px;
+        }
+
+        .section6 p {
+            max-width: 420px;
+        }
+
+        .subscribe-form {
+            width: 100%;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 8px;
+        }
+
+        .subscribe-form input {
+            width: 100%;
+            min-width: 0;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 14px;
+        }
+
+        .subscribe-form button {
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+
+        .footer {
+            padding: 32px 16px;
+        }
+
+        .footer-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px 12px;
+        }
+
+        .footer-colm {
+            min-width: 0;
+        }
+
+        .footer-colm h4,
+        .footer-colm a,
+        .footer-colm p {
+            overflow-wrap: anywhere;
+        }
+
+        .footer-colm a,
+        .footer-colm p {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 361px) {
+            .subpg,
+            .section1,
+            .about,
+            .section3,
+            .section4,
+            .section5,
+            .product-vieww,
+            .footer {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            .section1 .div2 img {
+                height: 240px;
+            }
+
+            .section3-card,
+            .card {
+                padding: 30px 24px;
+            }
+
+            .product-image {
+                height: 280px;
+            }
+
+            .section4 h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .section1,
+            .about {
+                padding: 36px 24px;
+            }
+
+            .section1 .div2 img {
+                height: 320px;
+            }
+
+            .about .image {
+                height: 400px;
+            }
+
+            .about .image img {
+                height: 320px;
+            }
+
+            .section3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding: 30px 24px;
+            }
+
+            .section3-card {
+                padding: 40px 24px;
+            }
+
+            .section4,
+            .section5 {
+                padding: 30px 24px;
+            }
+
+            .section4-container,
+            .section5-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .product-image {
+                height: 320px;
+            }
+
+            .product-vieww {
+                padding: 40px 24px;
+            }
+
+            .card {
+                padding: 36px 24px;
+            }
+
+            .footer {
+                padding: 40px 24px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            * {
+                box-sizing: content-box;
+            }
+
+            .page {
+                height: 90px;
+            }
+
+            .subpg {
+                grid-template-columns: auto 1fr;
+                gap: 0;
+                padding: 50px;
+            }
+
+            .subpg nav {
+                justify-self: end;
+            }
+
+            ul {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                gap: 20px;
+            }
+
+            ul li {
+                padding: 15px;
+            }
+
+            .btn {
+                margin: 10px;
+            }
+
+            .section1 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                height: 400px;
+                padding: 50px 80px;
+            }
+
+            .section1 .div2 img {
+                height: auto;
+            }
+
+            .about {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                height: 500px;
+                padding: 30px 80px;
+            }
+
+            .about .image {
+                height: 400px;
+            }
+
+            .about .image img {
+                height: 320px;
+            }
+
+            .image p {
+                margin: 30px 0 0;
+                font-size: 30px;
+            }
+
+            .part {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 100px;
+                font-size: large;
+                line-height: 30px;
+            }
+
+            .part .sub-part1 {
+                width: 50%;
+            }
+
+            .part2 {
+                margin-top: 50px;
+            }
+
+            .section3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                padding: 35px 80px;
+            }
+
+            .section3-card {
+                padding: 80px 40px;
+            }
+
+            .section4,
+            .section5 {
+                padding: 35px 80px;
+            }
+
+            .section4 h2 {
+                font-size: 40px;
+            }
+
+            .section4-container {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 40px;
+            }
+
+            .product-card {
+                height: 600px;
+            }
+
+            .product-image {
+                height: 75%;
+            }
+
+            .product-vieww {
+                padding: 50px 80px;
+            }
+
+            .section5-container {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 15px;
+            }
+
+            .card {
+                padding: 50px clamp(24px, 5vw, 80px);
+            }
+
+            .section6 h2 {
+                font-size: 25px;
+            }
+
+            .footer {
+                padding: 50px 80px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+            .footer-colm h4,
+            .footer-colm a,
+            .footer-colm p {
+                overflow-wrap: normal;
+            }
+
+            .footer-colm a,
+            .footer-colm p {
+                font-size: 17px;
+            }
+
+            .footer-bottom {
+                grid-template-columns: 1fr auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="page">
+            <div class="subpg">
+                <h2 style="color: red;">FBS</h2>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Reviews</a></li>
+                        <button class="btn"> contact us</button>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="section1">
+        <div class="div1">
+            <div class="child1">
+                <h1>Elevate Your Style</h1>
+                <h3 class="describe">Trendy Clothes & Uniqe Dress</h3>
+                <p>
+                    Discover The Latest Trends and re define your Style with our Stunning
+                    Collection. From Casual chick to elegent evenning wear we've got you covered
+                </p>
+
+                <p> Explore our hand pick Selection that blends sophistication and contemporary Fashion.
+                    Find the perfect out fitfor any occacsion
+                </p>
+            </div>
+            <div class="child2">
+                <div>
+                    <h2>5+</h2>
+                    <span>Years Experiences</span>
+                </div>
+                <div>
+                    <h2>100+</h2>
+                    <span>Happy Coustomers</span>
+                </div>
+                <div>
+                    <h2>50+</h2>
+                    <span>Products</span>
+                </div>
+            </div>
+            <div class="child3">
+                <button class="btn2">Shop Now</button>
+                <button class="btn3">Explore More</button>
+            </div>
+        </div>
+        <div class="div2">
+            <img src="assets/mall images.avif" alt="mall image">
+        </div>
+    </section>
+    <section class="section2">
+        <h1>About <span style="color: red;">Us</span></h1>
+        <div class="about">
+            <div class="image">
+                <img src="assets/shopping.avif" alt="shopping Mart">
+                <p>Fashinable Boutique Store</p>
+            </div>
+            <div class="str">
+                <div class="para">
+                    <h2 style="color: black;">Why Choose Us?</h2>
+
+                    <p style="margin-top: 30px;">At Fashionable Boutique Store, we believe that fashion is mora than
+                        just clothing.
+                        it's a form of sell-expression. Our carefully curated collections are designed to help you
+                        showcase your nique personality and style
+                    </p>
+                    <p>
+                        We are with emerging designers and established brands to bring to bring you exlusive pieces
+                        that
+                        you won't find anywhere else.
+                        Our team of style expert is always available to help you find the perfect outfit for any
+                        occasion.
+                    </p>
+                </div>
+                <div class="part">
+                    <div sub-part1>
+                        <div><i class="fa-solid fa-circle-check"></i>Premium Quality amterials</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Unique Designer Collections</div>
+                    </div>
+                    <div class="sub-part2">
+                        <div><i class="fa-solid fa-circle-check"></i>Personal Styling Services</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Sustainable & Ethical Fashion</div>
+                    </div>
+                </div>
+                <div class="part2">
+                    <button class="btn1">Learn More</button>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="section3-card">
+            <div><i class="fa-solid fa-truck-arrow-right"></i></div>
+            <h3>Free Delivery</h3>
+            <p>Enjoy free shipping on all orders over $50.Fast and reliable delivery to your doorstep.</p>
+        </div>
+        <div class="section3-card">
+            <div><i class="fa-solid fa-arrow-rotate-left"></i></div>
+            <h3>Easy Returns</h3>
+            <p> Not satisfied? Return within 30 days for a full refund. No questions asked. </p>
+        </div>
+        <div class="section3-card">
+            <div><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Secure Payments</h3>
+            <p>Your payment information is safe with us. We use industry-standard encryption.</p>
+        </div>
+    </section>
+    <section class="section4">
+        <div>
+            <h2>Latest <span>Products</span></h2>
+        </div>
+        <div class="section4-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/girl.jpg" alt="shopping girl">
+                    <span class="discount">-15%</span>
+                </div>
+                <div class="product-info">
+                    <h3>Elegant Evening Dress</h3>
+                    <p>Perfect for special occasions</p>
+                    <div class="price">
+                        <strong>$89.99</strong>
+                        <del>$105.99</del>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/girl.jpg" alt="shopping girl">
+                    <span class="discount">-10%</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>Summer Breeze Dress</h3>
+                    <p>Light and comfortable</p>
+                    <div class="price">
+                        <strong>$49.99</strong>
+                        <del>$55.99</del>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/girl.jpg" alt="shopping girl">
+                    <span class="discount">-20%</span>
+                </div>
+                <div class="product-info">
+                    <h3>Classic Little Black Dress</h3>
+                    <p>Timeless and versatile</p>
+                    <div class="price">
+                        <strong>$65.99</strong>
+                        <del>$82.99</del>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-vieww">
+            <button>View All Products</button>
+        </div>
+
+    </section>
+    <section class="section5">
+        <div>
+            <h1>What Our Clients Say</h1>
+        </div>
+
+        <div class="section5-container">
+
+            <div class="card">
+                <img src="assets/gobi.jpg" alt="gobi">
+                <h3>Gobikashan</h3>
+                <p class="role">Fashion Blogger</p>
+                <p class="review">
+                    "I've never been so impressed with a boutique's
+                    collection. The quality is exceptional and the
+                    styles are always on trend."
+                </p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+            <div class="card">
+                <img src="assets/Mathu.jpg" alt="mathu">
+                <h3>Mathushanth</h3>
+                <p class="role">Regular Customer</p>
+                <p class="review">
+                    "The personal styling service changed how I shop.
+                    The team understands my style perfectly."
+                </p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+            <div class="card">
+                <img src="assets/Pavi.jpg" alt="pavi">
+                <h3>Pavilojan</h3>
+                <p class="role">Business Professional</p>
+                <p class="review">
+                    "FBS delivered exactly what I needed - professional,
+                    stylish, and high-quality pieces that make a statement."
+                </p>
+                <div class="stars">★★★★☆</div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section6">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>
+            Get the latest fashion trends, exclusive offers,
+            and style tips delivered directly to your inbox.
+        </p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-colm">
+                <h4>Quick Links</h4>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Reviews</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-colm">
+                <h4>Categories</h4>
+                <a href="#">Dresses</a>
+                <a href="#">Tops</a>
+                <a href="#">Bottoms</a>
+                <a href="#">Outerwear</a>
+                <a href="#">Accessories</a>
+            </div>
+            <div class="footer-colm">
+                <h4>Customer Service</h4>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Returns & Exchanges</a>
+                <a href="#">Size Guide</a>
+                <a href="#">Care Instructions</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer-colm">
+                <h4>Contact Info</h4>
+                <p>☎️ (555)123-4567</p>
+                <p>✉️ hello@fbsfashion.com</p>
+                <p>📍 123 Fashion Ave, Style City</p>
+                <div class="links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Fashion Boutique Store. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
